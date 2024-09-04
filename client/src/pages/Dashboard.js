@@ -1,6 +1,6 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import { Container, Grid, Paper } from '@material-ui/core';
+import React from "react";
+import { makeStyles } from "@mui/styles";
+import { Container, Grid, Paper } from "@mui/material";
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -9,16 +9,16 @@ const useStyles = makeStyles((theme) => ({
   },
   paper: {
     padding: theme.spacing(2),
-    display: 'flex',
-    overflow: 'auto',
-    flexDirection: 'column',
+    display: "flex",
+    overflow: "auto",
+    flexDirection: "column",
   },
 }));
 
 export const Dashboard = (props) => {
   const classes = useStyles();
   return (
-    <Container maxWidth='lg' className={classes.container}>
+    <Container maxWidth="lg" className={classes.container}>
       <Grid container spacing={3}>
         <Grid item xs={12}>
           <Paper className={classes.paper}>

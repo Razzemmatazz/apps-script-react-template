@@ -1,8 +1,8 @@
-import React from 'react';
-import clsx from 'clsx';
-import { AppBar, Toolbar, IconButton, Typography } from '@material-ui/core';
-import { Menu } from '@material-ui/icons';
-import { makeStyles } from '@material-ui/core/styles';
+import React from "react";
+import clsx from "clsx";
+import { AppBar, Toolbar, IconButton, Typography } from "@mui/material";
+import { Menu } from "@mui/icons-material";
+import { makeStyles } from "@mui/styles";
 
 const drawerWidth = 240;
 const useStyles = makeStyles((theme) => ({
@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
   },
   appBar: {
     zIndex: theme.zIndex.drawer + 1,
-    transition: theme.transitions.create(['width', 'margin'], {
+    transition: theme.transitions.create(["width", "margin"], {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
     }),
@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
   appBarShift: {
     marginLeft: drawerWidth,
     width: `calc(100% - ${drawerWidth}px)`,
-    transition: theme.transitions.create(['width', 'margin'], {
+    transition: theme.transitions.create(["width", "margin"], {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.enteringScreen,
     }),
@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
     marginRight: 36,
   },
   menuButtonHidden: {
-    display: 'none',
+    display: "none",
   },
 }));
 
@@ -42,26 +42,26 @@ export const Header = ({ open, setOpen }) => {
   };
   return (
     <AppBar
-      position='absolute'
-      className={clsx(classes.appBar, open && classes.appBarShift)}>
+      position="absolute"
+      className={clsx(classes.appBar, open && classes.appBarShift)}
+    >
       <Toolbar className={classes.toolbar}>
         <IconButton
-          edge='start'
-          color='inherit'
-          aria-label='open drawer'
+          edge="start"
+          color="inherit"
+          aria-label="open drawer"
           onClick={handleDrawerOpen}
-          className={clsx(
-            classes.menuButton,
-            open && classes.menuButtonHidden
-          )}>
+          className={clsx(classes.menuButton, open && classes.menuButtonHidden)}
+        >
           <Menu />
         </IconButton>
         <Typography
-          component='h1'
-          variant='h6'
-          color='inherit'
+          component="h1"
+          variant="h6"
+          color="inherit"
           noWrap
-          className={classes.title}>
+          className={classes.title}
+        >
           Dashboard
         </Typography>
       </Toolbar>
