@@ -6,7 +6,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const HtmlWebpackInlineSourcePlugin = require("@effortlessmotion/html-webpack-inline-source-plugin");
 
 module.exports = merge(common, {
-  mode: "production",
+  mode: "development",
   output: {
     filename: "[name].bundle.js",
     path: path.resolve(__dirname, "../dist/prod"),
@@ -14,6 +14,7 @@ module.exports = merge(common, {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
+      inject: "body",
       template: "client/src/index.html",
       inlineSource: ".(js|css)$",
     }),
