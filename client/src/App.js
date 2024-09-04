@@ -3,6 +3,7 @@ import { makeStyles } from "@mui/styles";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Dashboard } from "./pages";
 import { Header, Drawer, Footer } from "./components";
+import { Profile } from "./pages/Profile";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -34,6 +35,7 @@ function App() {
           <div className={classes.pageContent}>
             <Routes>
               <Route path="/" element={<Dashboard />} />
+              <Route path="/profile" element={<Profile />} />
             </Routes>
           </div>
           <Footer />

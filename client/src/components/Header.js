@@ -62,7 +62,7 @@ export const Header = ({ open, setOpen }) => {
           noWrap
           className={classes.title}
         >
-          Dashboard
+          My Demo App
         </Typography>
       </Toolbar>
     </AppBar>

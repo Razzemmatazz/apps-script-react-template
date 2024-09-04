@@ -44,7 +44,7 @@ export const DrawerElement = ({ open, setOpen }) => {
 
   return (
     <Drawer
-      variant="permanent"
+      variant="persistent"
       classes={{
         paper: clsx(classes.drawerPaper, !open && classes.drawerPaperClose),
       }}

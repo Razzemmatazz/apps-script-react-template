@@ -10,40 +10,26 @@ import { Home, Person, SupervisorAccount } from "@mui/icons-material";
 
 export const MainListItems = (
   <div>
-    <Link to="/">
-      <ListItem>
-        <ListItemButton>
-          <ListItemIcon>
-            <Home />
-          </ListItemIcon>
-          <ListItemText primary="Dashboard" />
-        </ListItemButton>
-      </ListItem>
-    </Link>
+    <ListItem disablePadding>
+      <ListItemButton component={Link} to={"/"}>
+        <ListItemIcon>
+          <Home />
+        </ListItemIcon>
+        <ListItemText primary="Dashboard" />
+      </ListItemButton>
+    </ListItem>
   </div>
 );
 
 export const SecondaryListItems = (
   <div>
-    <Link to="/profile">
-      <ListItem>
-        <ListItemButton>
-          <ListItemIcon>
-            <Person />
-          </ListItemIcon>
-          <ListItemText primary="Profile" />
-        </ListItemButton>
-      </ListItem>
-    </Link>
-    <Link to="/signin">
-      <ListItem>
-        <ListItemButton>
-          <ListItemIcon>
-            <SupervisorAccount />
-          </ListItemIcon>
-          <ListItemText primary="Admin Login" />
-        </ListItemButton>
-      </ListItem>
-    </Link>
+    <ListItem disablePadding>
+      <ListItemButton component={Link} to={"/profile"}>
+        <ListItemIcon>
+          <Person />
+        </ListItemIcon>
+        <ListItemText primary="Profile" />
+      </ListItemButton>
+    </ListItem>
   </div>
 );
