@@ -105,5 +105,3 @@ dist
 
 # Prod
 dist/
-
-package-lock.json

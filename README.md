@@ -2,11 +2,11 @@
 
 Start by installing [Google Clasp](https://github.com/google/clasp/)
 
-Once installed, either `clasp clone` your Google Sheets Apps Script file, or `clasp create` a new standalone Apps Script project.
+Once installed, either `clasp clone` your Google Sheets Apps Script file, or `clasp create` a new standalone Apps Script project. This will generate `.clasp.json` and `appsscript.json` files into the root of this project.
 
-In your `.clasp.json` file, add `"rootDir": "dist/prod"` as a parameter.
+In your `.clasp.json` file, change `"rootDir"` to `"dist/prod"`.
 
-Finally, run `npm install` and you're good to go.
+Finally, run `npm install`.
 
 ## Scripts
 
@@ -48,4 +48,4 @@ _deploy:prod_
 
 ## Extras
 
-I've included a basic setup for [Material-UI 6](https://material-ui.com/) and React Router 6.
+I've included the basic setup for [Material-UI 6](https://material-ui.com/) and React Router 6.

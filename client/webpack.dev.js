@@ -17,11 +17,11 @@ module.exports = merge(common, {
   output: {
     filename: "[name].bundle.js",
     path: path.resolve(__dirname, "../dist/local"),
-    publicPath: "/",
   },
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
+      inject: "body",
       template: "client/src/index.html",
     }),
   ],
