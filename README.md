@@ -10,30 +10,42 @@ Finally, run `npm install` and you're good to go.
 
 ## Scripts
 
-_build_
-
-- Makes a dev build in `dist/local`
-
-_local_
+_launch:local_
 
 - Runs the current dev build
 
-_prod_
+_launch:prod_
 
-- Makes a production build in `dist/gas`
+- Uses `clasp` to launch the webapp picker and open the selected version in the browser
 
-_gas_
+_build:local_
 
-- Packages your Apps Script files into the AppLib library module (from lib.bundle.js) so you can utilize your npm packages server-side as well.
+- Builds a dev version in `dist/local`
 
-_deploy_
+_build:prod_
 
-- Bundles prod and gas
-- Removes the extra app.bundle.js file (it's inlined into index.html)
+- Builds a prod version in `dist/prod`
+
+_build:gas_
+
+- Packages your Apps Script files into the AppLib library module (from lib.bundle.js) so you can utilize your npm packages server-side as well. Builds in `dist/prod`.
+
+_redeploy_
+
+- Allows you to redeploy to the same version ID. Useful for keeping a static URL.
+
+_deploy:gas_
+
+- Pushes the latest `dist/prod` via `clasp` to your Apps Script project
+
+_deploy:prod_
+
+- Bundles `client` into `app.bundle.js` and `server` into `lib.bundle.js`
+- Inlines `app.bundle.js` into `index.html`
 - Pushes your code to Apps Script
 - Deploys a new version
 - Launches the Webapp selector
 
 ## Extras
 
-I've included the basic setup for [Material-UI](https://material-ui.com/) and React Router.
+I've included a basic setup for [Material-UI 6](https://material-ui.com/) and React Router 6.

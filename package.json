@@ -12,7 +12,7 @@
     "build:gas": "webpack --config ./server/webpack.gas.js && node server/transform_bundle",
     "redeploy": "clasp deploy -i AKfycbzyKXSd18dfPzuUgYHBRnGSHM0CZFmJb2sI0K_VkvQHbB7f6W-wyTi_nDLCt-aO4aq-",
     "deploy:gas": "npm run build:prod && npm run build:gas && clasp push",
-    "deploy:launch": "npm run build:prod && npm run build:gas && clasp push && npm run redeploy && npm run launch:prod"
+    "deploy:prod": "npm run build:prod && npm run build:gas && clasp push && npm run redeploy && npm run launch:prod"
   },
   "dependencies": {
     "@emotion/react": "^11.13.3",
